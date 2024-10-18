@@ -3,6 +3,7 @@ import random
 def play_game():
     print("Welcome to the advanced number guessing game!")
 
+    #Here we are asking the user to choose the difficulty level for the game
     difficulty_levels = {"easy": 10, "medium": 7, "hard": 5}
     while True:
         difficulty = input("Choose a difficulty level (easy, medium, hard): ").lower()
@@ -12,6 +13,7 @@ def play_game():
         else:
             print("Invalid input. Please choose again from the above options.")
 
+    #We are going to check weather the input value given by the user matchs secret number or not and given respective feedback
     secret_number = random.randint(1, 100)
     print(f"You have {attempts} attempts to guess a number between 1 and 100.")
 
@@ -29,6 +31,8 @@ def play_game():
         if attempt == attempts:
             print(f"Sorry, you're out of attempts. The correct number was {secret_number}.")
 
+
+# Here we are going to check weather the input given by the user sre vaild or not.
 def get_valid_input(prompt, valid_range=None):
     while True:
         try:
